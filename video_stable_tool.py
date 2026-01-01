@@ -200,7 +200,12 @@ class VideoProcessorGUI:
         usage_text = tk.Text(usage_frame, height=6, width=60, wrap=tk.WORD, state="normal")
         usage_text.insert("1.0", 
                           """
-mocha pro程序里，参考我的上一个视频完成追踪后，点左上角file--export rendered clip--export to改为QuickTime movie--OK--resolution可以调低，别的参数也可以调低--导出
+mocha pro程序里，
+点击顶部某种create...spline按钮，圈出感兴趣的区域，包含动物人物等目标
+左边track motion options选择允许的变换方法，例如移动、缩放、变形，一般长焦拍摄移动缓慢的动物只选择移动
+点击下面track的播放按钮，track forward
+在框偏差较大时暂停跟踪，修正框，继续跟踪，直到整个视频跟踪完成
+点左上角file--export rendered clip--export to改为QuickTime movie--OK--resolution可以调低，别的参数也可以调低--导出
 不过mocha默认不会降分辨率，推荐先把视频分辨率缩小到1/8以下再进行追踪标注，提升计算速度。以上步骤分辨率变换都不影响什么，取的是相对位置，输出视频是一个黑色的、包含目标白色矩形的视频。
 然后运行我给的python文件即可，设置目标分辨率、外扩倍数（为1则按照你绘制的追踪矩形，否则进行中心不变的 外扩，标准为宽度，然后按照输出长宽比得到目标roi），然后就能生成目标视频
 然后可通过以下命令进行音频复制和视频压缩，或者你自己导到别的视频编辑软件操作
@@ -269,3 +274,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = VideoProcessorGUI(root)
     root.mainloop()
+
