@@ -1,4 +1,6 @@
-关联视频：https://www.bilibili.com/BV15MvDBXE5c
+- 关联视频：https://www.bilibili.com/BV15MvDBXE5c
+- 用于依据 mocha pro 的输出生成防抖的视频
+- TODO：替换成VLM生成防抖模板
 
 提示词：
 
